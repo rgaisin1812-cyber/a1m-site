@@ -1,0 +1,61 @@
+.journal-section { background: #f5f5ef; }
+.journal-section h2 { margin-top: 0; }
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(22px, 3vw, 44px);
+  margin-top: 36px;
+}
+.journal-card { background: #fff; }
+.journal-card a { display: block; height: 100%; color: #172b25; text-decoration: none; }
+.journal-card img { width: 100%; height: auto; aspect-ratio: 16/9; display: block; object-fit: cover; }
+.journal-card div { padding: clamp(18px, 2.4vw, 32px); }
+.journal-card h3 { font-size: clamp(1.25rem, 2.2vw, 1.8rem); line-height: 1.22; margin: 0 0 12px; }
+.journal-card p { margin: 0; color: #43554d; line-height: 1.65; font-size: 1rem; }
+.journal-card a:hover h3, .journal-card a:focus-visible h3 { text-decoration: underline; text-underline-offset: .14em; }
+.journal-page, .journal-page * { box-sizing: border-box; }
+.journal-page {
+  margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+  color: #172b25; background: #f5f5ef; font: 1rem/1.65 Manrope, Arial, sans-serif;
+}
+.journal-page a { color: inherit; text-underline-offset: .2em; }
+.journal-page :focus-visible, .journal-card a:focus-visible { outline: 3px solid #ad6422; outline-offset: 3px; }
+.journal-page .shell { max-width: 1320px; margin: 0 auto; padding: 0 6%; display: flex; align-items: center; gap: 1.25rem; }
+.journal-nav { background: white; border-bottom: 1px solid #d4dcd5; }
+.journal-nav .shell { min-height: 70px; justify-content: space-between; }
+.journal-nav .brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; font-weight: 800; letter-spacing: -.045em; }
+.journal-nav .brand img { object-fit: contain; }
+.journal-nav .brand b { color: #dc1f2e; }
+.journal-nav nav { display: flex; gap: .35rem; }
+.journal-nav nav a { font-weight: 700; font-size: .875rem; padding: .35rem; text-decoration: none; }
+.journal-nav [aria-current="page"] { border-bottom: 2px solid #a95815; }
+.journal-footer { margin-top: auto; background: #10211c; color: #e4ece5; padding: 24px 0; font-size: .9rem; }
+.journal-footer .shell { flex-wrap: wrap; justify-content: space-between; }
+.reader, .consent { width: min(88%, 780px); margin: 0 auto; padding: clamp(36px, 6vw, 78px) 0; }
+.reader h1, .consent h1 { margin: .55em 0 .3em; font-size: clamp(2rem, 4.5vw, 3.75rem); line-height: 1.1; letter-spacing: -.036em; overflow-wrap: anywhere; }
+.reader .intro { font-size: clamp(1.1rem, 2vw, 1.4rem); color: #40554a; }
+.reader article > img { width: 100%; max-height: 510px; object-fit: contain; height: auto; display: block; margin: 1.7rem auto; }
+.reader h2 { margin: 1.65em 0 .45em; font-size: clamp(1.35rem, 2.5vw, 1.85rem); line-height: 1.25; }
+.reader section p { margin-top: 0; font-size: 1.08rem; }
+.backlink, .source { font-size: .95rem; }
+.source { border-top: 1px solid #b8c4bb; padding-top: 1.25rem; margin-top: 2rem; }
+.consent { max-width: 680px; }
+.consent h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-top: 0; }
+.consent details { margin: 1.25rem 0; }
+.consent summary { cursor: pointer; font-weight: 700; }
+.consent .route { display: none; padding: clamp(18px, 3vw, 28px); background: #fff; border: 1px solid #c3cdc4; }
+.consent .route:target, .consent:not(:has(.route:target)) #email { display: grid; grid-template-columns: auto 1fr; gap: 14px; }
+.agree { align-self: start; margin: .27em 0; width: 1.25rem; height: 1.25rem; accent-color: #1d4c3b; }
+.agree + label { cursor: pointer; }
+.action { grid-column: 1/-1; margin-top: .4rem; }
+.action a, .action button { display: inline-block; padding: .78em 1.45em; font: inherit; font-weight: 700; border: 0; }
+.action a { background: #e5953e; text-decoration: none; }
+.action button { background: #e2e6e2; color: #566157; }
+.agree:not(:checked) ~ .action a, .agree:checked ~ .action button { display: none; }
+.cancel { display: inline-block; margin-top: 1.2rem; }
+@media(max-width: 650px) {
+  .journal-grid { grid-template-columns: 1fr; }
+  .journal-nav .shell { gap: .3rem; padding: 0 4%; }
+  .journal-nav .brand { font-size: .95rem; }
+  .journal-footer .shell { align-items: start; flex-direction: column; gap: .65rem; }
+}
