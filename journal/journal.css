@@ -23,9 +23,8 @@
 .journal-page .shell { max-width: 1320px; margin: 0 auto; padding: 0 6%; display: flex; align-items: center; gap: 1.25rem; }
 .journal-nav { background: white; border-bottom: 1px solid #d4dcd5; }
 .journal-nav .shell { min-height: 70px; justify-content: space-between; }
-.journal-nav .brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; font-weight: 800; letter-spacing: -.045em; }
-.journal-nav .brand img { object-fit: contain; }
-.journal-nav .brand b { color: #dc1f2e; }
+.journal-nav .brand { display: inline-flex; min-width: 0; }
+.logo img, .journal-nav .brand img { display: block; width: clamp(128px, 40vw, 210px); max-width: 100%; height: auto; }
 .journal-nav nav { display: flex; gap: .35rem; }
 .journal-nav nav a { font-weight: 700; font-size: .875rem; padding: .35rem; text-decoration: none; }
 .journal-nav [aria-current="page"] { border-bottom: 2px solid #a95815; }
@@ -56,6 +55,5 @@
 @media(max-width: 650px) {
   .journal-grid { grid-template-columns: 1fr; }
   .journal-nav .shell { gap: .3rem; padding: 0 4%; }
-  .journal-nav .brand { font-size: .95rem; }
   .journal-footer .shell { align-items: start; flex-direction: column; gap: .65rem; }
 }
