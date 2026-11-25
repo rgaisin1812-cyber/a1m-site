@@ -13,3 +13,6 @@
 .cookie-actions button:hover { background: #344b41; }
 #cookie-settings { background: transparent; color: inherit; border: 0; padding: 4px 0; font: inherit; text-decoration: underline; cursor: pointer; }
 .cookie-actions button:focus-visible, #cookie-settings:focus-visible { outline: 3px solid #df8a12; outline-offset: 2px; }
+
+#cookie-panel .cookie-policy-link a { color: #20332c; text-decoration: underline; text-underline-offset: .15em; }
+footer .wrap { flex-wrap: wrap; }
