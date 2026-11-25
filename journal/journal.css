@@ -57,3 +57,12 @@
   .journal-nav .shell { gap: .3rem; padding: 0 4%; }
   .journal-footer .shell { align-items: start; flex-direction: column; gap: .65rem; }
 }
+
+.offer-lonking .offer-image { width: 100%; height: auto; object-fit: contain; background: white; }
+.offer-lonking .offer-model { position: absolute; top: 12px; left: 12px; max-width: calc(100% - 24px); padding: 5px 10px; color: white; background: #172b25; font-weight: 700; }
+.offer-lonking .offer-overlay { overflow-y: auto; justify-content: flex-start; padding-top: 54px; }
+.offer-lonking .offer-overlay > * { flex-shrink: 0; }
+.offer-lonking .offer-table th, .offer-lonking .offer-table td { padding-block: 4px; }
+.offer-lonking .offer-table [scope="rowgroup"] { font-weight: 800; padding-top: 9px; color: white; }
+.offer-lonking.is-open .offer-model { visibility: hidden; }
+@media (hover: hover) { .offer-lonking:hover .offer-model { visibility: hidden; } }
